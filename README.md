@@ -1,9 +1,9 @@
-# ForReal Rental Research RPA
+# ForRent Rental Research RPA
 
 ## Description
-The ForReal Rental Research RPA (Robotic Process Automation) tool is designed to scrape house listings from ForReal.com and automatically fill a Google Form with the scraped data. It aims to automate the process of gathering rental property information, saving time and effort for researchers or anyone looking for rental listings.
+The ForRent Rental Research RPA (Robotic Process Automation) tool is designed to scrape house listings from ForRent.com and automatically fill a Google Form with the scraped data. It aims to automate the process of gathering rental property information, saving time and effort for researchers or anyone looking for rental listings.
 
-This tool utilizes web scraping techniques to extract relevant details such as property location, price, description, and other key information from ForReal.com. The extracted data is then populated into a Google Form, streamlining the process of collecting rental property data.
+This tool utilizes web scraping techniques to extract relevant details such as property location, price, description, and other key information from ForRent.com. The extracted data is then populated into a Google Form, streamlining the process of collecting rental property data.
 
 ## Features
 - Automated scraping of rental listings from ForReal.com
@@ -21,7 +21,7 @@ This tool utilizes web scraping techniques to extract relevant details such as p
 ## Installation and Setup
 1. Clone the repository:
    ```shell
-   git clone https://github.com/guccigamp/ForReal-Rental-Research-RPA.git
+   git clone https://github.com/guccigamp/ForRent-Rental-Research-RPA.git
    ```
 2. Install the required dependencies:
    ```shell
@@ -44,7 +44,7 @@ python main.py
 ```
 
 ## Usage
-- Upon running the script, the ForReal-Rental-Research-RPA tool will launch a Chrome browser and navigate to ForRent.com.
+- Upon running the script, the ForRent-Rental-Research-RPA tool will launch a Chrome browser and navigate to ForRent.com.
 - It will scrape the rental listings, extract the desired details, and populate them into the configured Google Form.
 - You can monitor the progress and view the results in the Google Form.
 

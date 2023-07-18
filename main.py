@@ -4,16 +4,20 @@ import requests
 from pprint import pprint
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.wait import WebDriverWait as wait
-from selenium.webdriver.support import expected_conditions as EC
+import json
 
-# beautifulsoup
-headers = {
-    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8"
-}
-response = requests.get("https://www.forrent.com/find/TX/metro-Houston/Sugar+Land/price-Less+than+2100",
+
+with open(file="/Users/aagamshah/Desktop/Python_Course/Data Entry Automation/config.json", mode="r") as f:
+    data = json.load(f)
+
+
+headers = data["headers"]
+listing_website = data["listing_website"]
+google_form = data["google_form"]
+
+# Scraping the resulted listings
+
+response = requests.get(listing_website,
                         headers=headers).text
 soup = BeautifulSoup(response, 'html.parser')
 apartment_listing = []
@@ -26,11 +30,11 @@ for listing in soup.find_all("li", class_="list-result-item"):
     }
     apartment_listing.append(house)
 
-# selenium
+# Filling the google form
 
 driver = webdriver.Chrome()
 for listing in apartment_listing:
-    driver.get('https://docs.google.com/forms/d/e/1FAIpQLScTLvCd3ds8We9iZT8GYB0imYisaU1Q0Rw0AxuQFkSRzePtNA/viewform?usp=sf_link')
+    driver.get(google_form)
 
     time.sleep(2)
 

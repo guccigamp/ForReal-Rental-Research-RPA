@@ -1,7 +1,6 @@
 import time
 from bs4 import BeautifulSoup
 import requests
-from pprint import pprint
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import json

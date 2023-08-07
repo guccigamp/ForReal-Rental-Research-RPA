@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 import json
 
 
-with open(file="/Users/aagamshah/Desktop/Python_Course/Data Entry Automation/config.json", mode="r") as f:
+with open(file="config.json", mode="r") as f:
     data = json.load(f)
 
 
